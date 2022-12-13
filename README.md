@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Project following the https://www.theodinproject.com/ Ruby on Rails course.
+This is a study project with the intention to practice session and authentication methods.
+Users can Sign in, Log in and Log Out.
+Once Logged they can post in in the index page.
+Users can read the post's author name just when they're logged.
