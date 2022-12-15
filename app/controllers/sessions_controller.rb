@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
     private
 
     def compare(obj)
-        converted_pass=BCrypt::Engine.hash_secret(params[:password],obj[:crypt})
+        converted_pass=BCrypt::Engine.hash_secret(params[:password],obj[:crypt])
         ActiveSupport::SecurityUtils.secure_compare(obj[:h_password],converted_pass)
     end
 end

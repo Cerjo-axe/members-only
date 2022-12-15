@@ -1,10 +1,14 @@
 class User < ApplicationRecord
     attr_accessor :password
+
+    has_many :posts
     validates :username, presence:true, uniqueness:true, length:{minimum: 5 }
     validates :email, presence:true, uniqueness:true, length:{minimum: 10 }
     validates :password, presence:true, length:{in: 8..20 }, on: :create
 
-    before_validation(on: :create) :encrypt
+    before_validation(on: :create) do
+        encrypt
+    end
 
     private
     def encrypt
